@@ -5,7 +5,7 @@ import Home from "./pages/Home"
 import Vans from "./pages/Vans"
 import About from "./pages/About"
 
-import "./server"
+import "./server.js"
 
 function App() {
   return (
