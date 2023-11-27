@@ -9,7 +9,7 @@ export default function Vans(){
             .then(data => setVansData(data.vans))
     }, [])
 
-    const vansEl => vansData.map(el => {
+    const vansEl = vansData.map(el => {
         return (
             <div>
                 <h2>{el.name}</h2>
