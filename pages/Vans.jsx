@@ -5,8 +5,9 @@ export default function Vans(){
 
     React.useEffect(() => {
         fetch("/api/vans")
-            .then(res => res.json())
+            .then(res => res.ok ? res.json() : Promise.reject(res))
             .then(data => setVansData(data.vans))
+            .catch(res => handleError(res))
     }, [])
 
     const vansEl = vansData.map(el => {
