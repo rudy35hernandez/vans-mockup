@@ -13,6 +13,7 @@ export default function Vans(){
         return (
             <div>
                 <h2>{el.name}</h2>
+                <img src={el.imageUrl} alt="van picture" />
             </div>
         )
     })
