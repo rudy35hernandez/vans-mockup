@@ -152,6 +152,11 @@ header a:hover {
     flex-direction: column;
 }
 
+.van-pic{
+    width: 300px;
+    height: 300px
+}
+
 .name-price{
     display: flex;
     flex-direction: row;
