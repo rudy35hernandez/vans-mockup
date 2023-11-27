@@ -3,7 +3,7 @@ import React from "react"
 export default function Vans(){
     const [vansData, setVansData] = React.useState([])
 
-    React.useEffect(() ={
+    React.useEffect(() => {
         fetch("/api/vans")
             .then(res => res.json())
             .then(data => setVansData(data.vans))
