@@ -14,7 +14,7 @@ export default function Vans(){
             <div>
                 <img src={el.imageUrl} alt="van picture" />
                 <h2>{el.name}</h2>
-                <h4>{el.price}</h4>
+                <h4>${el.price} <br></br> /day</h4>
                 <h3>{el.type}</h3>
             </div>
         )
