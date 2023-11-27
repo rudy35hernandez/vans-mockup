@@ -11,10 +11,12 @@ export default function Vans(){
 
     const vansEl = vansData.map(el => {
         return (
-            <div>
+            <div className="van-info">
                 <img src={el.imageUrl} alt="van picture" />
-                <h2>{el.name}</h2>
-                <h4>${el.price} <br></br> /day</h4>
+                <div className="name-price">
+                    <h2>{el.name}</h2>
+                    <h4>${el.price} <br></br> /day</h4>
+                </div>
                 <h3>{el.type}</h3>
             </div>
         )

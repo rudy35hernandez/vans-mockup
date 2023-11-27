@@ -143,3 +143,16 @@ header a:hover {
     color: white;
     border-radius: 10px;
 }
+
+
+/**** VANS PAGE *****/
+
+.van-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.name-price{
+    display: flex;
+    flex-direction: row;
+}
