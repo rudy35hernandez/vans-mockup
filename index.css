@@ -148,7 +148,11 @@ header a:hover {
 /**** VANS PAGE *****/
 
 .van-selections {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 34px;
+    margin-top: 57px;
 }
 
 .van-info{
