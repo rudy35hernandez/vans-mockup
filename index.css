@@ -147,6 +147,10 @@ header a:hover {
 
 /**** VANS PAGE *****/
 
+.van-selections {
+    display: flex;
+}
+
 .van-info{
     display: flex;
     flex-direction: column;
