@@ -5,14 +5,13 @@ export default function Vans(){
 
     React.useEffect(() => {
         fetch("/api/vans")
-            .then(res => res.ok ? res.json() : Promise.reject(res))
+            .then(res => res.json())
             .then(data => setVansData(data.vans))
-            .catch(res => handleError(res))
     }, [])
 
     const vansEl = vansData.map(el => {
         return (
-            <div key={van.id} className="van-info">
+            <div key={el.id} className="van-info">
                 <img src={el.imageUrl} className="van-pic" alt="van picture" />
                 <div className="name-price">
                     <h2>{el.name}</h2>
