@@ -24,8 +24,7 @@ export default function Vans(){
     })
 
     return (
-        <div>
-            <h1>Explore our van options </h1>
+        <div className="van-list-container">
             <div className="van-selections">
                 {vansEl}
             </div>
