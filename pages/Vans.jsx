@@ -12,7 +12,7 @@ export default function Vans(){
 
     const vansEl = vansData.map(el => {
         return (
-            <div key={el.id} className="van-info">
+            <div key={el.id} className="van-tile">
                 <Link to={`/vans/${el.id}`}>
                 <img src={el.imageUrl} className="van-pic" alt="van picture" />
                 <div className="name-price">
