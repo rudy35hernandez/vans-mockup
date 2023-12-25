@@ -159,6 +159,11 @@ header a:hover {
     margin-top: 57px;
 }
 
+.van-tile{
+    display: flex;
+    flex-direction: column;
+}
+
 .van-tile a {
     color: #161616;
     text-decoration: none;    
