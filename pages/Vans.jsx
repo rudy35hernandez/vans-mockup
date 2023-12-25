@@ -19,7 +19,7 @@ export default function Vans(){
                     <h2>{el.name}</h2>
                     <h4>${el.price} <br></br> /day</h4>
                 </div>
-                <h3>{el.type}</h3>
+                <i>{el.type}</i>
                 </Link>
             </div>
         )
