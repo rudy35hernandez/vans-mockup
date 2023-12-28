@@ -19,6 +19,10 @@ export default function VanDetail(){
                 <div className="van-detail"> 
                     <img src={vanData.imageUrl} alt="picture of van" />
                     <i className={`van-type ${vanData.type} selected`}>{vanData.type}</i>
+                    <h2>{vanData.name}</h2>
+                    <p className="van-price"><span>${vanData.price}</span>/day</p>
+                    <p>{vanData.description}</p>
+                    <button className="link-button">Rent this van</button>
                 </div>
 
             ) : <h2>Loading...</h2>}
