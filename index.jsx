@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import Vans from "./pages/Vans"
 import About from "./pages/About"
 import VanDetail from "./pages/VanDetail"
+import Layout from "./components/Layout"
 
 import "./server.js"
 
