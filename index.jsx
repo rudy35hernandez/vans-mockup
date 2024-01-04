@@ -6,6 +6,7 @@ import Vans from "./pages/Vans"
 import About from "./pages/About"
 import VanDetail from "./pages/VanDetail"
 import Dashboard from "./pages/Host/Dashboard"
+import Reviews from "./pages/Host/Reviews"
 
 import Layout from "./components/Layout"
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
           <Route path="/host" element={<Dashboard />} />
+          <Route path="/host/reviews" element={<Reviews />} />
         </Route>
       </Routes>
     </BrowserRouter>
