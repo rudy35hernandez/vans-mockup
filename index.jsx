@@ -21,8 +21,9 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
-          <Route path="/host" element={<Dashboard />} />
-          <Route path="/host/reviews" element={<Reviews />} />
+          <Route path="/host" element={<Dashboard />}>
+            <Route path="/host/reviews" element={<Reviews />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
