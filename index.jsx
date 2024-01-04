@@ -5,11 +5,11 @@ import Home from "./pages/Home"
 import Vans from "./pages/Vans"
 import About from "./pages/About"
 import VanDetail from "./pages/VanDetail"
-import Layout from "./components/Layout"
 import Dashboard from "./pages/Host/Dashboard"
 import Income from "./pages/Host/Income"
 import Reviews from "./pages/Host/Reviews"
 
+import Layout from "./components/Layout"
 
 import "./server.js"
 
