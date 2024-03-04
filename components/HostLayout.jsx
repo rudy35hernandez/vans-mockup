@@ -23,13 +23,13 @@ export default function HostLayout(){
                     to="/host/income"
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
-                    test???????
+                    Income
                 </NavLink>
                 <NavLink 
                     to="/host/vans"
                     style={({isActive}) => isActive ? activeStyles : null}
                 >
-                    HostVansTest
+                    Vans
                 </NavLink>
                 <NavLink 
                     to="/host/reviews"
