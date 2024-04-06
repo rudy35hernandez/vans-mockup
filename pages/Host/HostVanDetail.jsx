@@ -4,11 +4,17 @@ import {useParams} from "react-router-dom"
 export default function HostVanDetail(){
 
     const params = useParams()
-    const [van, vanDetails] = React.useState([])
+    const [currentVan, setCurrentVan] = React.useState([])
+
+    React.useEffect(() => {
+        fetch(`/api/host/vans/${params.id}`)
+            .then(res => res.json())
+            .then(data => setCurrentVan(data.vans))
+    }, [])
 
     return (
-        <h1>
-            
-        </h1>
+        <>
+
+        </>
     )
 }
