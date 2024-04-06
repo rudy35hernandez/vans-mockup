@@ -1,5 +1,5 @@
 import React from "react"
-import {useParams} from "react-router-dom"
+import {useParams, Link} from "react-router-dom"
 
 export default function HostVanDetail(){
 
@@ -9,7 +9,7 @@ export default function HostVanDetail(){
     React.useEffect(() => {
         fetch(`/api/host/vans/${params.id}`)
             .then(res => res.json())
-            .then(data => setCurrentVan(data.vans))
+            .then(data => setCurrentVan(data.vans[0]))
     }, [])
 
     if(!currentVan) {
