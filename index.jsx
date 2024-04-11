@@ -14,6 +14,8 @@ import Layout from "./components/Layout"
 import HostLayout from "./components/HostLayout"
 import HostVanLayout from "./components/HostVanLayout"
 
+import HostVanInfo from "./pages/Host/HostVanInfo"
+
 import "./server.js"
 
 function App() {
@@ -32,8 +34,8 @@ function App() {
             <Route path="vans" element={<HostVans /> } />
             <Route path="reviews" element={<Reviews />} />
             <Route path="vans/:id" element={<HostVanDetail />} >
-              <Route element={<HostVanLayout />}>
-                
+              <Route element={<HostVanLayout />} >
+                <Route index element={<HostVanInfo />} />
               </Route>
             </Route>
           </Route>
