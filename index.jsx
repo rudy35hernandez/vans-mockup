@@ -15,6 +15,8 @@ import HostLayout from "./components/HostLayout"
 import HostVanLayout from "./components/HostVanLayout"
 
 import HostVanInfo from "./pages/Host/HostVanInfo"
+import HostVanPricing from "./pages/Host/HostVanPricing"
+import HostVanPhotos from "./pages/Host/HostVanPhotos"
 
 import "./server.js"
 
