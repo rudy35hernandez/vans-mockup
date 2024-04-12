@@ -36,6 +36,8 @@ function App() {
             <Route path="vans/:id" element={<HostVanDetail />} >
               <Route element={<HostVanLayout />} >
                 <Route index element={<HostVanInfo />} />
+                <Route path="pricing" element={<HostVanPricing />} />
+                <Route path="photos" element={<HostVanPhotos />} />
               </Route>
             </Route>
           </Route>
