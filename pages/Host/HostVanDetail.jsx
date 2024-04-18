@@ -1,5 +1,5 @@
 import React from "react"
-import {useParams, Link, Outlet} from "react-router-dom"
+import {useParams, Link, Outlet, NavLink} from "react-router-dom"
 
 export default function HostVanDetail(){
 
@@ -37,10 +37,10 @@ export default function HostVanDetail(){
                         <h4>${currentVan.price}/day</h4>
                     </div>
                 </div>
-                <nav>
-                    <p>test</p>
-                    <p>pricing</p>
-                    <p>photos</p>
+                <nav className="host-van-detail-van">
+                    <NavLink>Details</NavLink>
+                    <NavLink>Pricing</NavLink>
+                    <NavLink>Photos</NavLink>
                 </nav>
                 <Outlet />
             </div>
