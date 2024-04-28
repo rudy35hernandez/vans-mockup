@@ -8,6 +8,8 @@ export default function HostVanInfo(){
     return(
         <>
             <h1>{currentVan.name}</h1>
+            <h2>{currentVan.type}</h2>
+            <p>{currentVan.description}</p>
         </>
     )
 }
