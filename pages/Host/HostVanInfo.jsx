@@ -5,6 +5,8 @@ export default function HostVanInfo(){
 
     const [currentVan, setCurrentVan] = useOutletContext()
 
+    console.log(currentVan)
+    
     return(
         <>
             <h1>{currentVan.name}</h1>
