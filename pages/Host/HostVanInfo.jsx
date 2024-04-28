@@ -9,9 +9,9 @@ export default function HostVanInfo(){
     
     return(
         <>
-            <h1>Name:{currentVan.name}</h1>
-            <h2>Category: {currentVan.type}</h2>
-            <p>Description: {currentVan.description}</p>
+            <h4>Name: <span>{currentVan.name}</span></h4>
+            <h4>Category: <span>{currentVan.type}</span></h4>
+            <h4>Description: <span>{currentVan.description}</span> </h4>
         </>
     )
 }
