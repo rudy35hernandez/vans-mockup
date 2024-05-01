@@ -6,8 +6,8 @@ export default function HostVanPricing(){
     const [currentVan, setCurrentVan] = useOutletContext()
 
     return(
-        <h2>
-            ${currentVan.price}.00 / day
-        </h2>
+        <h3 className="host-van-price">
+            ${currentVan.price}<span>/ day</span>
+        </h3>
     )
 }

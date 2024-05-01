@@ -6,8 +6,7 @@ export default function HostVanPhotos(){
     const [currentVan, setCurrentVan] = useOutletContext()
 
     return (
-        <>
-            <img src={currentVan.imageUrl} />
-        </>
+            <img src={currentVan.imageUrl} className="host-van-detail-image" alt={`Picture of ${currentVan}`}/>
+    
     )
 }
