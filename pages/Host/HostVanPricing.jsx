@@ -3,7 +3,7 @@ import {useOutletContext} from "react-router-dom"
 
 export default function HostVanPricing(){
 
-    const {currentVan, setCurrentVan} = useOutletContext()
+    const [currentVan, setCurrentVan] = useOutletContext()
 
     return(
         <h2>
