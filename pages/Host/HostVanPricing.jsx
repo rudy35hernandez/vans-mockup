@@ -7,7 +7,7 @@ export default function HostVanPricing(){
 
     return(
         <h2>
-            {currentVan.price}
+            ${currentVan.price}.00 / day
         </h2>
     )
 }
