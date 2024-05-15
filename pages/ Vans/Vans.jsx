@@ -2,21 +2,21 @@ import React from "react"
 import {Link, useSearchParams} from "react-router-dom"
 
 export default function Vans(){
-    const [vansData, setVansData] = React.useState([])
+    const [vans, setVans] = React.useState([])
 
     const [searchParams, setSearchParams] = useSearchParams()
 
     const typeFilter = searchParams.get("type")
 
-    const vansToDisplay = typeFilter ? vansData.filter(van => van.type === typeFilter) : vans
+    const vansToDisplay = typeFilter ? vans.filter(van => van.type === typeFilter) : vans
 
     React.useEffect(() => {
         fetch("/api/vans")
             .then(res => res.json())
-            .then(data => setVansData(data.vans))
+            .then(data => setVans(data.vans))
     }, [])
 
-    const vansEl = vansData.map(el => {
+    const vansEl = vans.map(el => {
         return (
             <div key={el.id} className="van-tile">
                 <Link to={`/vans/${el.id}`}>
