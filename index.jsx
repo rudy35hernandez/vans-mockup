@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Home from "./pages/Home"
-import Vans from "./pages/Vans"
+import Vans from "./pages/Vans/Vans"
 import About from "./pages/About"
-import VanDetail from "./pages/VanDetail"
+import VanDetail from "./pages/Vans/VanDetail"
 import Dashboard from "./pages/Host/Dashboard"
 import Reviews from "./pages/Host/Reviews"
 import Income from "./pages/Host/Income"
