@@ -8,7 +8,7 @@ export default function Vans(){
 
     const typeFilter = searchParams.get("type")
 
-    const vansToDisplay = typeFilter ? vans.filter(van => van.type === typeFilter) : vans
+    const displayedVans = typeFilter ? vans.filter(van => van.type === typeFilter) : vans
 
     React.useEffect(() => {
         fetch("/api/vans")
@@ -16,7 +16,7 @@ export default function Vans(){
             .then(data => setVans(data.vans))
     }, [])
 
-    const vansEl = vansToDisplay.map(el => {
+    const vansEl = displayedVans.map(el => {
         return (
             <div key={el.id} className="van-tile">
                 <Link to={`/vans/${el.id}`}>
