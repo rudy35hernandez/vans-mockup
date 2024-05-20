@@ -44,6 +44,9 @@ export default function Vans(){
                 <Link to="?type=simple" className="van-type simple">
                     Simple
                 </Link>
+                <Link to="." className="van-type clear-filter">
+                    Clear
+                </Link>
             </div>
             <div className="van-selections">
                 {vansEl}
