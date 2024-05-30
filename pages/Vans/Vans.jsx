@@ -32,7 +32,7 @@ export default function Vans(){
     })
 
     function handleFilterChange(key, value){
-        setSearchParams((prevParams) => {
+        setSearchParams(prevParams => {
             if (value === null){
                 prevParams.delete(key)
             } else {
