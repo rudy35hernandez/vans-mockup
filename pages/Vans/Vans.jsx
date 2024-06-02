@@ -64,12 +64,12 @@ export default function Vans(){
                 </button>
                 {
                 typeFilter ?
-                <button
-                    onClick={() => handleFilterChange("type", null)}
-                    className="van-type clear-filters">
-                    Clear
-                </button> : 
-                null
+                    (<button
+                        onClick={() => handleFilterChange("type", null)}
+                        className="van-type clear-filters">
+                        Clear
+                    </button>) : 
+                    null
                 }
             </div>
             <div className="van-selections">
