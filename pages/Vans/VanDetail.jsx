@@ -1,11 +1,12 @@
 import React from "react"
-import {Link, useParams} from "react-router-dom"
+import {Link, useParams, useLocation} from "react-router-dom"
 
 
 export default function VanDetail(){
 
     const params = useParams()
     const [vanData, setVanData] = React.useState(null)
+    const location = useLocation()
 
     React.useEffect(() => {
         fetch(`/api/vans/${params.id}`)
@@ -13,10 +14,13 @@ export default function VanDetail(){
             .then(data => setVanData(data.vans))
     }, [params.id])
 
+    // below will test to see if location.state exists, if not, returns empty string
+    const search = location.state?.search || ""
+
     return (
         <div className="van-detail-container">
             <Link
-                to=".."
+                to={`..${search}`}
                 relative="path"
                 className="back-button"
             >
