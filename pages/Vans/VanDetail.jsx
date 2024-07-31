@@ -17,6 +17,8 @@ export default function VanDetail(){
     // below will test to see if location.state exists, if not, returns empty string
     const search = location.state?.search || ""
 
+    const type = location.state?.type
+
     return (
         <div className="van-detail-container">
             <Link
@@ -24,7 +26,7 @@ export default function VanDetail(){
                 relative="path"
                 className="back-button"
             >
-                &larr; <span>Back to all vans</span>
+                &larr; <span>{type ? `Back to ${type} vans` : `Back to all vans`}</span>
             </Link>
             {vanData ? (
                 <div className="van-detail"> 
