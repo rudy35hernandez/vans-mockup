@@ -40,8 +40,8 @@ function App() {
                 <Route path="pricing" element={<HostVanPricing />} />
                 <Route path="photos" element={<HostVanPhotos />} />
             </Route>
-            <Route path="*" element={<h1>Page not found</h1>} />
           </Route>
+          <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
       </Routes>
     </BrowserRouter>
