@@ -11,11 +11,11 @@ export default function Vans(){
 
 
     React.useEffect(() => {
-        async function test(){
+        async function loadVans(){
             const data = await getVans()
             setVans(data)
         }
-
+        loadVans()
         
     }, [])
 
