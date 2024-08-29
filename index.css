@@ -525,3 +525,29 @@ i[class*='van-type-'] {
 i[class*='van-type-'] {
     padding: 7px 14px;
 }
+
+
+/* CATCH ALL PAGE */
+
+.catch-all{
+    padding: 45px 23px;
+
+}
+
+.catch-all a{
+    .home-container a {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        background-color: #161616;
+        border: none;
+        width: 100%;
+        margin-top: 27px;
+        padding-block: .75rem;
+        color: white;
+        font-weight: 700;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform .1s ease-in-out;
+    }
+}
