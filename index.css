@@ -535,7 +535,6 @@ i[class*='van-type-'] {
 }
 
 .catch-all a{
-    .home-container a {
         display: inline-block;
         text-align: center;
         text-decoration: none;
@@ -549,5 +548,5 @@ i[class*='van-type-'] {
         border-radius: 5px;
         cursor: pointer;
         transition: transform .1s ease-in-out;
-    }
+    
 }
