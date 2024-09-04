@@ -6,6 +6,7 @@ export default function Vans(){
     const [vans, setVans] = React.useState([])
     const [loading, setLoading] = React.useState(false) // To load the page smoothly, otherwise pics will load after making removing its uniform loading
     const [searchParams, setSearchParams] = useSearchParams()
+    const [error, setError] = React.useState(null)
 
     const typeFilter = searchParams.get("type")
 
@@ -13,10 +14,16 @@ export default function Vans(){
     React.useEffect(() => {
         async function loadVans(){
             setLoading(true)
-            const data = await getVans()
-            setVans(data)
-            setLoading(false)
+            try {
+                const data = await getVans()
+                setVans(data)
+            } catch(err){
+                setError(err)
+            } finally{
+                setLoading(false)
+            }
         }
+        
         loadVans()
         
     }, [])
@@ -53,6 +60,10 @@ export default function Vans(){
 
     if(loading){
         return <h1>Loading...</h1>
+    }
+
+    if(error){
+        return <h1>{error.message}</h1>
     }
 
     return (
