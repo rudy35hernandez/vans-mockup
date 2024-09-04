@@ -63,7 +63,7 @@ export default function Vans(){
     }
 
     if(error){
-        return <h1>{error.message}</h1>
+        return <h1>There was an error: {error.message}</h1>
     }
 
     return (
