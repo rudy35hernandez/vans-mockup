@@ -4,7 +4,7 @@ import {getVans} from "../../api.js"
 
 export default function Vans(){
     const [vans, setVans] = React.useState([])
-    const [loading, setLoading] = React.useState(false)
+    const [loading, setLoading] = React.useState(false) // To load the page smoothly, otherwise pics will load after making removing its uniform loading
     const [searchParams, setSearchParams] = useSearchParams()
 
     const typeFilter = searchParams.get("type")
