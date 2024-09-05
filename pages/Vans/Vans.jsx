@@ -4,7 +4,7 @@ import {getVans} from "../../api.js"
 
 export default function Vans(){
     const [vans, setVans] = React.useState([])
-    const [loading, setLoading] = React.useState(false) // To load the page smoothly, otherwise pics will load after making removing its uniform loading
+    const [loading, setLoading] = React.useState(false) // To load the page smoothly, otherwise pics will load after making removing its uniformity loading
     const [searchParams, setSearchParams] = useSearchParams()
     const [error, setError] = React.useState(null)
 
@@ -19,14 +19,15 @@ export default function Vans(){
                 setVans(data)
             } catch(err){
                 setError(err)
-            } finally{
+            } finally {
                 setLoading(false)
             }
         }
+            loadVans()
+    }, [])  
+
         
-        loadVans()
-        
-    }, [])
+
 
     const displayedVans = typeFilter ? vans.filter(van => van.type === typeFilter) : vans
 
@@ -63,7 +64,7 @@ export default function Vans(){
     }
 
     if(error){
-        return <h1>There was an error: {error.message}</h1>
+        return <h1>There is an error:{error.message}</h1>
     }
 
     return (
