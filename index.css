@@ -92,6 +92,11 @@ footer {
     transform: translate(1px, 1px);
 }
 
+header .login-icon {
+    height: 18px;
+    width: 18px;
+}
+
 .back-button {
     display: block;
     color: black;
