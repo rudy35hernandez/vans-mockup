@@ -41,12 +41,6 @@ header .site-logo {
     font-size: 25px;
 }
 
-a.active-link {
-    font-weight: bolder;
-    text-decoration: underline;
-    color: #161616;
-}
-
 header a {
     text-decoration: none;
     color: #4D4D4D;
@@ -57,6 +51,10 @@ header a {
 header a:hover {
     color: #161616;
     text-decoration: underline;
+}
+
+nav {
+    display: flex;
 }
 
 main {
@@ -74,6 +72,14 @@ footer {
     margin-top: auto;
     font-weight: 500
 }
+
+a.active-link {
+    font-weight: bolder;
+    text-decoration: underline;
+    color: #161616;
+}
+
+
 
 .link-button {
     display: inline-block;
