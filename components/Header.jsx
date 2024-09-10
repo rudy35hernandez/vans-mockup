@@ -17,7 +17,7 @@ export default function Header(){
             </NavLink>
             <Link to="login" className="logo-link">
                 <img 
-                    src="../assets/images/user-icon.png" 
+                    src="./assets/images/user-icon.png" 
                     className="login-icon"
                 />
             </Link>
