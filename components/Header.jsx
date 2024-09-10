@@ -1,4 +1,5 @@
 import React from "react"
+import icon from "../assets/images/user-icon.png"
 import { Link, NavLink } from "react-router-dom"
 
 export default function Header(){
@@ -17,7 +18,7 @@ export default function Header(){
             </NavLink>
             <Link to="login" className="logo-link">
                 <img 
-                    src="./assets/images/user-icon.png" 
+                    src={icon}
                     className="login-icon"
                 />
             </Link>
