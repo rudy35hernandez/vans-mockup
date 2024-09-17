@@ -567,7 +567,6 @@ i[class*='van-type-'] {
     flex-direction: column;
     align-items: center;
     width: 200px;
-    border: solid black;
     width: 100%;
     justify-content: center;
 }
@@ -590,7 +589,7 @@ i[class*='van-type-'] {
 
 .login-form > input:first-of-type{
     border-radius: 6px 6px 0 0;
-    
+
 }
 
 .login-form > input:last-of-type {
