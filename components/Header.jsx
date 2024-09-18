@@ -1,5 +1,5 @@
 import React from "react"
-import icon from "../assets/images/user-icon.png"
+import icon from "../assets/images/user-cirlce-icon.png"
 import { Link, NavLink } from "react-router-dom"
 
 export default function Header(){
