@@ -587,6 +587,10 @@ i[class*='van-type-'] {
     font-weight: 400px
 }
 
+.login-form > input:focus {
+    outline: none;
+}
+
 .login-form > input:first-of-type{
     border-radius: 6px 6px 0 0;
 
