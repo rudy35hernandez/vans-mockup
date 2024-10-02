@@ -7,6 +7,7 @@ import Login from "./pages/Login"
 import NotFound from "./pages/NotFound"
 import Vans from "./pages/Vans/Vans"
 import VanDetail from "./pages/Vans/VanDetail"
+import AuthRequired from "./components/AuthRequired.jsx";
 import Dashboard from "./pages/Host/Dashboard"
 import Reviews from "./pages/Host/Reviews"
 import Income from "./pages/Host/Income"
@@ -32,7 +33,7 @@ function App() {
           <Route path="login" element={<Login />} />
           <Route path="vans" element={<Vans />} />
           <Route path="vans/:id" element={<VanDetail />} />
-
+        <Route element={<AuthRequired />}>
           <Route path="host" element={<HostLayout />} >
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
@@ -44,6 +45,7 @@ function App() {
                 <Route path="photos" element={<HostVanPhotos />} />
             </Route>
           </Route>
+        </Route>
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
