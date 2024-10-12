@@ -1,45 +1,60 @@
 import React from "react"
-import {Link, useParams, useLocation} from "react-router-dom"
+import { Link, useParams, useLocation } from "react-router-dom"
+import { getVans } from "../../api"
 
-
-export default function VanDetail(){
-
-    const params = useParams()
-    const [vanData, setVanData] = React.useState(null)
+export default function VanDetail() {
+    const [van, setVan] = React.useState(null)
+    const [loading, setLoading] = React.useState(false)
+    const [error, setError] = React.useState(null)
+    const { id } = useParams()
     const location = useLocation()
 
     React.useEffect(() => {
-        fetch(`/api/vans/${params.id}`)
-            .then(res => res.json())
-            .then(data => setVanData(data.vans))
-    }, [params.id])
+        async function loadVans() {
+            setLoading(true)
+            try {
+                const data = await getVans(id)
+                setVan(data)
+            } catch (err) {
+                setError(err)
+            } finally {
+                setLoading(false)
+            }
+        }
+        loadVans()
+    }, [id])
+    
+    if (loading) {
+        return <h1>Loading...</h1>
+    }
+    
+    if (error) {
+        return <h1>There was an error: {error.message}</h1>
+    }
 
-    // below will test to see if location.state exists, if not, returns empty string
-    const search = location.state?.search || ""
-
-    const type = location.state?.type || "all"
-
+    const search = location.state?.search || "";
+    const type = location.state?.type || "all";
+    
     return (
         <div className="van-detail-container">
             <Link
                 to={`..${search}`}
                 relative="path"
                 className="back-button"
-            >
-                &larr; <span>{`Back to ${type} vans`}</span>
-            </Link>
-            {vanData ? (
-                <div className="van-detail"> 
-                    <img src={vanData.imageUrl} alt="picture of van" />
-                    <i className={`van-type ${vanData.type} selected`}>{vanData.type}</i>
-                    <h2>{vanData.name}</h2>
-                    <p className="van-price"><span>${vanData.price}</span>/day</p>
-                    <p>{vanData.description}</p>
+            >&larr; <span>Back to {type} vans</span></Link>
+            
+            {van && (
+                <div className="van-detail">
+                    <img src={van.imageUrl} />
+                    <i className={`van-type ${van.type} selected`}>
+                        {van.type}
+                    </i>
+                    <h2>{van.name}</h2>
+                    <p className="van-price"><span>${van.price}</span>/day</p>
+                    <p>{van.description}</p>
                     <button className="link-button">Rent this van</button>
                 </div>
-
-            ) : <h2>Loading...</h2>}
+            )}
         </div>
-
     )
 }
