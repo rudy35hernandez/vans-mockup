@@ -49,7 +49,9 @@ export default function Login(){
                     value={loginFormData.password}
                 />
                 <button disabled={status === "submitting"}>
-                    {status === "submitting" ? "Logging in" : "Log in"}
+                    {status === "submitting" 
+                    ? "Logging in" 
+                    : "Log in"}
                 </button>
             </form>
         </div>
